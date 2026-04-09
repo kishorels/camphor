@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Base reveal transition defaults should stay in index.css */
+/* But we can add app-specific overrides here if needed */

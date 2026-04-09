@@ -1,0 +1,124 @@
+.stats {
+  background-color: var(--color-bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-item {
+  position: relative;
+  background: var(--color-bg-card);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.stat-item:hover {
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-hover);
+  transform: translateY(-8px);
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--color-amber-400);
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.stat-bg-icon {
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  width: 120px;
+  height: 120px;
+  color: var(--color-amber-400);
+  opacity: 0.03;
+  z-index: 1;
+  transition: all var(--transition-base);
+}
+
+.stat-item:hover .stat-bg-icon {
+  opacity: 0.08;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.stat-bg-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1;
+}
+
+/* Background lines */
+.stats-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stats-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.1), transparent);
+  height: 1px;
+  width: 100%;
+}
+
+.stats-line-1 {
+  top: 30%;
+  left: -20%;
+  transform: rotate(15deg);
+  animation: shimmer 10s infinite linear;
+}
+
+.stats-line-2 {
+  bottom: 30%;
+  right: -20%;
+  transform: rotate(-15deg);
+  animation: shimmer 12s infinite linear reverse;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-item {
+    padding: 2.5rem 1.5rem;
+  }
+}
