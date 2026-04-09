@@ -52,11 +52,11 @@ export default function Hero() {
         
         <h1 className="hero-title">
           <span className="hero-title-line">
-            <span className="hero-word" style={{ animationDelay: '0.2s' }}>Crafting</span>
+            <span className="hero-word" style={{ animationDelay: '0.2s' }}>Crafting </span>
           </span>
           <span className="hero-title-line">
             <span className="hero-word accent" style={{ animationDelay: '0.4s' }}>Premium</span>{' '}
-            <span className="hero-word" style={{ animationDelay: '0.5s' }}>Camphor</span>
+            <span className="hero-word" style={{ animationDelay: '0.5s' }}>Camphor </span>
           </span>
           <span className="hero-title-line">
             <span className="hero-word" style={{ animationDelay: '0.7s' }}>with</span>{' '}

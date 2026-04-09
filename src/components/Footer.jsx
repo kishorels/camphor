@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom';
+import CrystalLogo from './CrystalLogo';
 import './Footer.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/" className="footer-logo" data-cursor-hover>
-              <img src="/logo.png" alt="Anu Industries" />
+              <CrystalLogo className="footer-logo-svg" />
               <span>Anu Industries</span>
             </Link>
             <p className="footer-tagline">
-              Purity is not just a promise, it's our heritage. Manufacturing premium 
+              Purity is not just a promise, it's our heritage. Manufacturing premium
               camphor products since 1995.
             </p>
           </div>
@@ -29,7 +30,7 @@ export default function Footer() {
                 <li><Link to="/contact" data-cursor-hover>Quote</Link></li>
               </ul>
             </div>
-            
+
             <div className="footer-group">
               <h4>Products</h4>
               <ul>
