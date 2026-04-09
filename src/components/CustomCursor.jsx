@@ -36,12 +36,12 @@ export default function CustomCursor() {
     const animate = () => {
       // Very smooth LERP (Linear Interpolation)
       // Small cursor follows almost instantly but with slight smoothing
-      currentX += (mouseX - currentX) * 0.2;
-      currentY += (mouseY - currentY) * 0.2;
+      currentX += (mouseX - currentX) * 0.4;
+      currentY += (mouseY - currentY) * 0.4;
       
       // Large follower has more inertia (slower)
-      followerX += (mouseX - followerX) * 0.08;
-      followerY += (mouseY - followerY) * 0.08;
+      followerX += (mouseX - followerX) * 0.15;
+      followerY += (mouseY - followerY) * 0.15;
       
       if (cursor) {
         cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
